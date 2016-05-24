@@ -63,6 +63,13 @@ app.get("/tacos", function (req, res) {
     res.send(tacos.join(", "));
 });
 
+app.get("/pickanumber", function (req, res) {
+    var number = req.query.number;
+    if (number === 7) {
+        res.send("You picked " + number + "!");
+    }
+});
+
 // start the server
 app.listen(3000, function () {
     console.log("Go to localhost:3000/");
